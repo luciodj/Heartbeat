@@ -20,7 +20,7 @@ Effectively the LED will start blinking at the **beating** frequency:
 1.     The PIC16F150x series offers a limited choice of connections between the CLC modules and the NCO (only CLC1 can take input or send output from/to the NCO)   
 2.     Only CLC2 can drive directly one of he LEDs `(RC0 = LED1)` of the Low Pin Count demo board
 3.     The beating period is determined by the NCO clock input frequency: to achieve a Heartbeat > 1s (slow rhythmic pulsation) a low Fosc must be used (< 2MHz). Counterintuitively this is true regardless of the choice of PWM frequency.
-4.     The number of dimming steps is determined entirely by the Increment value used (2^20 /  Increment). Values of Increment < 16384 are desirable to achieve a sufficient dimming smoothness (>256 steps)
+4.     The number of dimming steps is determined entirely by the Increment value used (2^20 /  Increment). Values of Increment \< 16384 are desirable to achieve a sufficient dimming smoothness (\>256 steps)
 
 See the Excel spreadsheet for validation of the formulas used.
 
