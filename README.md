@@ -36,13 +36,16 @@ See the Excel spreadsheet for validation of the formulas used.
  0 (zero) MIPS, set & forget, smoothly pulsating LED1 output 
 
 ## Advanced Solutions
-a.     More LEDs can be controlled by using additional CLC modules (not available on the Low Pin Count board unless a device with PPS is used to replace the 150x)
+1.     More LEDs can be controlled by using additional CLC modules  
+    **NOTE:** Not available on the Low Pin Count board unless a device with PPS is used to replace the 150x
 
-b.     If a higher Fosc is desired/required by the _rest of the application_ use CLC4 and CLC1 (JK mode with toggle configuration) to divide Fosc by 4 and feed it to the NCO (only CLC1 can be used as clock input). Present the NCO output on the pin (sacrificed) and use the same pin as input to CLC3 (CLC3IN1). Use CLC3 as a pass through to CLC2 who performs the AND with PWM1 and  drives the LED (low pin count board). On other custom boards or if using devices with PPS, this step won't be necessary.
-
-
-
+2.     If a higher Fosc is desired/required by the _rest of the application_:
+    * Use CLC4 and CLC1 (JK mode with toggle configuration) to divide Fosc by 4 and feed it to the NCO (only CLC1 can be used as clock input). 
+    * Present the NCO output on the pin (sacrificed) and use the same pin as input to CLC3 (CLC3IN1). 
+    * Use CLC3 as a pass through to CLC2 who performs the AND with PWM1 and  drives LED1 (low pin count board). 
+    * **NOTE:** The last step won't be necessary on custom boards or if using devices with PPS.
     
+     
 
     
 
