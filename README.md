@@ -19,8 +19,8 @@ Effectively the LED will start blinking at the **beating** frequency:
 ## Limitations
 1.     The PIC16F150x series offers a limited choice of connections between the CLC modules and the NCO (only CLC1 can take input or send output from/to the NCO)   
 2.     Only CLC2 can drive directly one of he LEDs `(RC0 = LED1)` of the Low Pin Count demo board
-3.     The beating period is determined by the NCO clock input frequency: to achieve a Heartbeat > 1s (slow rhythmic pulsation) a low Fosc must be used (< 2MHz). Counterintuitively this is true regardless of the choice of PWM frequency.
-4.     The number of dimming steps is determined entirely by the Increment value used (2^20 /  Increment). Values of Increment \< 16384 are desirable to achieve a sufficient dimming smoothness (\>256 steps)
+3.     The beating period is determined by the NCO clock input frequency: to achieve a Heartbeat &gt; 1s (slow rhythmic pulsation) a low Fosc must be used (&lt; 2MHz). Counterintuitively this is true regardless of the choice of PWM frequency.
+4.     The number of dimming steps is determined entirely by the Increment value used (2\^20 /  Increment). Values of Increment &lt; 16384 are desirable to achieve a sufficient dimming smoothness (&gt;256 steps)
 
 See the Excel spreadsheet for validation of the formulas used.
 
@@ -29,8 +29,6 @@ See the Excel spreadsheet for validation of the formulas used.
 
 * Use CLC2 to perform the AND between PWM1 and the CLC1 output (NCO) 
 * Fosc = 1 MHz will allow a compromise of a 2s pulse rate  
-
-
 
 ### Result
  0 (zero) MIPS, set & forget, smoothly pulsating LED1 output 
