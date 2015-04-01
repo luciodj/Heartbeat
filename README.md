@@ -1,4 +1,4 @@
-#Heartbeat
+# Heartbeat
 
 This is a test project to evaluate using CIPs to generate automatically a Heartbeat.
 
@@ -6,7 +6,7 @@ This is a test project to evaluate using CIPs to generate automatically a Heartb
 * Board: PICDEM Low Pin Count 
 * Debugger: PICkit 3
 
-##The Basic Idea
+## The Basic Idea
 * Use TMR2 + PWM1 to generate a square wave (50% duty cycle).
 * Use the NCO to generate a similar square wave (50% duty cycle) but with a slightly higher frequency.
 * Perform an AND between the two using the CLC and drive an LED with the output.
