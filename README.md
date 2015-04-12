@@ -1,10 +1,10 @@
 # Heartbeat
 
-This is a test project to evaluate using CIPs to generate automatically a Heartbeat.
+This is a test project to demonstrate using Core Independent Peripherals (CIP) to generate automatically a Heartbeat (LED smooth Pulsing at 0.5Hz ).
 
-* Device: PIC16F1509
-* Board: PICDEM Low Pin Count 
-* Debugger: PICkit 3
+* Device: PIC16F1509 (any other PIC16F1 featuring NCO and CLC)
+* Board: PICDEM® Low Pin Count or [Simplicity](https://github.com/luciodj/Simplicity)
+* Debugger: PICkit® 3
 
 ## The Basic Idea
 * Use TMR2 + PWM1 to generate a square wave (50% duty cycle).
@@ -35,7 +35,7 @@ See the Excel spreadsheet for validation of the formulas used.
 
 ## Advanced Solutions
 1. More LEDs can be controlled by using additional CLC modules  
-    **NOTE:** Not available on the Low Pin Count board unless a device with PPS is used to replace the 150x
+    **NOTE:** Not available on the Low Pin Count board unless a device with PPS is used to replace the PIC16F150x (for example PIC16F170x)
 
 2. If a higher Fosc is desired/required by the _rest of the application_:
     * Use CLC4 and CLC1 (JK mode with toggle configuration) to divide Fosc by 4 and feed it to the NCO (only CLC1 can be used as clock input). 
