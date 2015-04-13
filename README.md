@@ -42,7 +42,10 @@ See the Excel spreadsheet for validation of the formulas used.
     * Present the NCO output on the pin (sacrificed) and use the same pin as input to CLC3 (CLC3IN1). 
     * Use CLC3 as a pass through to CLC2 who performs the AND with PWM1 and  drives LED1 (low pin count board). 
     * **NOTE:** The last step won't be necessary on custom boards or if using devices with PPS.
+
+## Related Projects and Demos
     
+* Check the [Simplicity](https://github.com/luciodj/Simplicity) project for more demo like this using the MPLAB Code Configurator and the MikroElektronika Click(tm) boards.
      
 
     
