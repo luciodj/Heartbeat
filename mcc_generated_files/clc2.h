@@ -80,7 +80,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None
 
   @Comment
-    
+    Perform AND between PWM1OUT and NCO1OUT (via CLC1) -> CLC2OUT = RC0=LED0
 
   @Example
     <code>

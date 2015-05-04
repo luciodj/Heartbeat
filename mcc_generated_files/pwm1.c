@@ -55,7 +55,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
   Section: Macro Declarations
 */
 
-#define PWM1_INITIALIZE_DUTY_VALUE    34
+#define PWM1_INITIALIZE_DUTY_VALUE    31
 
 /**
   Section: PWM Module APIs
@@ -64,14 +64,14 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 void PWM1_Initialize(void)
 {
     // Set the PWM to the options selected in the MPLAB® Code Configurator.
-    // PWM1EN enabled; PWM1POL active_hi; PWM1OE disabled; 
-    PWM1CON = 0x80;
+    // PWM1EN enabled; PWM1POL active_hi; PWM1OE enabled; 
+    PWM1CON = 0xC0;
     
-    // PWM1DCH 8; 
-    PWM1DCH = 0x08;
+    // PWM1DCH 7; 
+    PWM1DCH = 0x07;
     
-    // PWM1DCL 128; 
-    PWM1DCL = 0x80;
+    // PWM1DCL 192; 
+    PWM1DCL = 0xC0;
     
 }
 

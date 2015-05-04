@@ -80,7 +80,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None
 
   @Comment
-    
+    Pass through the NCO1OUT signal (to CLC2)
 
   @Example
     <code>

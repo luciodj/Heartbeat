@@ -59,17 +59,17 @@ void CLC1_Initialize(void)
 {
     // Set the CLC1 to the options selected in the User Interface
 
-    // LC1G4POL inverted; LC1G1POL not_inverted; LC1G2POL inverted; LC1G3POL not_inverted; LC1POL not_inverted; 
-    CLC1POL = 0x0A;
+    // LC1G4POL not_inverted; LC1G1POL not_inverted; LC1G2POL not_inverted; LC1G3POL not_inverted; LC1POL not_inverted; 
+    CLC1POL = 0x00;
 
-    // LC1D1S TMR0IF; LC1D2S FOSC; 
-    CLC1SEL0 = 0x05;
+    // LC1D1S CLCIN0; LC1D2S FOSC; 
+    CLC1SEL0 = 0x00;
 
-    // LC1D3S LC4OUT; LC1D4S NCO1OUT; 
-    CLC1SEL1 = 0x03;
+    // LC1D3S LC1OUT; LC1D4S NCO1OUT; 
+    CLC1SEL1 = 0x00;
 
-    // LC1G1D3T enabled; LC1G1D2T disabled; LC1G1D1T disabled; LC1G1D4N disabled; LC1G1D1N disabled; LC1G1D2N disabled; LC1G1D3N disabled; LC1G1D4T disabled; 
-    CLC1GLS0 = 0x20;
+    // LC1G1D3T disabled; LC1G1D2T disabled; LC1G1D1T disabled; LC1G1D4N disabled; LC1G1D1N disabled; LC1G1D2N disabled; LC1G1D3N disabled; LC1G1D4T enabled; 
+    CLC1GLS0 = 0x80;
 
     // LC1G2D4N disabled; LC1G2D3N disabled; LC1G2D2N disabled; LC1G2D4T disabled; LC1G2D3T disabled; LC1G2D2T disabled; LC1G2D1N disabled; LC1G2D1T disabled; 
     CLC1GLS1 = 0x00;
@@ -80,8 +80,8 @@ void CLC1_Initialize(void)
     // LC1G4D1T disabled; LC1G4D4T disabled; LC1G4D2N disabled; LC1G4D3N disabled; LC1G4D4N disabled; LC1G4D1N disabled; LC1G4D3T disabled; LC1G4D2T disabled; 
     CLC1GLS3 = 0x00;
 
-    // LC1MODE JK flip-flop with R; LC1EN enabled; LCINTP disabled; LCINTN disabled; LC1OUT disabled; LC1OE disabled; 
-    CLC1CON = 0x86;
+    // LC1MODE OR-XOR; LC1EN enabled; LCINTP disabled; LCINTN disabled; LC1OUT disabled; LC1OE enabled; 
+    CLC1CON = 0xC1;
 
 }
 /**

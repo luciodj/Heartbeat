@@ -65,14 +65,14 @@ void CLC2_Initialize(void)
     // LC2D1S CLCIN0; LC2D2S FOSC; 
     CLC2SEL0 = 0x00;
 
-    // LC2D4S PWM1OUT; LC2D3S LC3OUT; 
-    CLC2SEL1 = 0x22;
+    // LC2D4S PWM1OUT; LC2D3S LC1OUT; 
+    CLC2SEL1 = 0x20;
 
-    // LC2G1D2N disabled; LC2G1D1N disabled; LC2G1D4N disabled; LC2G1D3N disabled; LC2G1D4T enabled; LC2G1D1T disabled; LC2G1D2T disabled; LC2G1D3T disabled; 
-    CLC2GLS0 = 0x80;
+    // LC2G1D2N disabled; LC2G1D1N disabled; LC2G1D4N disabled; LC2G1D3N disabled; LC2G1D4T disabled; LC2G1D1T disabled; LC2G1D2T disabled; LC2G1D3T enabled; 
+    CLC2GLS0 = 0x20;
 
-    // LC2G2D2N disabled; LC2G2D4T disabled; LC2G2D1N disabled; LC2G2D3T enabled; LC2G2D3N disabled; LC2G2D4N disabled; LC2G2D1T disabled; LC2G2D2T disabled; 
-    CLC2GLS1 = 0x20;
+    // LC2G2D2N disabled; LC2G2D4T enabled; LC2G2D1N disabled; LC2G2D3T disabled; LC2G2D3N disabled; LC2G2D4N disabled; LC2G2D1T disabled; LC2G2D2T disabled; 
+    CLC2GLS1 = 0x80;
 
     // LC2G3D4N disabled; LC2G3D1T disabled; LC2G3D1N disabled; LC2G3D3N disabled; LC2G3D2N disabled; LC2G3D4T disabled; LC2G3D2T disabled; LC2G3D3T disabled; 
     CLC2GLS2 = 0x00;

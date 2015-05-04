@@ -52,7 +52,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #pragma config PWRTE = OFF    // Power-up Timer Enable->PWRT disabled
 #pragma config FOSC = INTOSC    // Oscillator Selection Bits->INTOSC oscillator: I/O function on CLKIN pin
 #pragma config FCMEN = OFF    // Fail-Safe Clock Monitor Enable->Fail-Safe Clock Monitor is disabled
-#pragma config MCLRE = OFF    // MCLR Pin Function Select->MCLR/VPP pin function is digital input
+#pragma config MCLRE = ON    // MCLR Pin Function Select->MCLR/VPP pin function is MCLR
 #pragma config CP = OFF    // Flash Program Memory Code Protection->Program memory code protection is disabled
 #pragma config WDTE = OFF    // Watchdog Timer Enable->WDT disabled
 #pragma config CLKOUTEN = OFF    // Clock Out Enable->CLKOUT function is disabled. I/O or oscillator function on the CLKOUT pin
@@ -72,18 +72,15 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     CLC1_Initialize();
     NCO1_Initialize();
-    CLC2_Initialize();
     TMR2_Initialize();
     PWM1_Initialize();
-    CLC3_Initialize();
-    CLC4_Initialize();
-    TMR0_Initialize();
+    CLC2_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
 {
-    // SCS INTOSC; IRCF 4MHz_HF; 
-    OSCCON = 0x6A;
+    // SCS INTOSC; IRCF 125KHz_HF; 
+    OSCCON = 0x42;
     // OSTS intosc; HFIOFR disabled; HFIOFS not0.5percent_acc; LFIOFR disabled; 
     OSCSTAT = 0x00;
     // Set the secondary oscillator

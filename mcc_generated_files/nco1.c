@@ -61,8 +61,8 @@ void NCO1_Initialize (void)
     // N1OUT out_lo; N1PFM FDC_mode; N1POL active_lo; N1EN disabled; N1OE enabled; 
     NCO1CON = 0x50;
 
-    // N1PWS 1_clk; N1CKS LC1OUT; 
-    NCO1CLK = 0x02;
+    // N1PWS 1_clk; N1CKS FOSC; 
+    NCO1CLK = 0x01;
 
     // NCOACCU 0; 
     NCO1ACCU = 0x00;
@@ -76,11 +76,11 @@ void NCO1_Initialize (void)
 
 
 
-    // NCO1INCH 0x7F
-    NCO1INCH = 0x7F;
+    // NCO1INCH 32
+    NCO1INCH = 32;
 
-    // NCO1INCL 0xFF
-    NCO1INCL = 0xFF;
+    // NCO1INCL 5
+    NCO1INCL = 5;
 
 
 

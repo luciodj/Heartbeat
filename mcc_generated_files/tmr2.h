@@ -87,7 +87,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None
 
   @Comment
-    
+    Generate a 2ms period for PWM1
 
   @Example
     <code>

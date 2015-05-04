@@ -84,7 +84,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None
 
   @Comment
-    
+    Generate a 2,048.5 Hz output square wave (50% duty cycle)
 
  @Example
     <code>

@@ -83,7 +83,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     None
 
   @Comment
-    
+    Produce a square wave based on TMR2 2,048.0Hz output
 
  @Example
     <code>

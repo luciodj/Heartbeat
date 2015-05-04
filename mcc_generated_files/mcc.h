@@ -52,14 +52,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <stdbool.h>
 #include "clc1.h"
 #include "nco1.h"
-#include "clc2.h"
 #include "tmr2.h"
 #include "pwm1.h"
-#include "clc3.h"
-#include "clc4.h"
-#include "tmr0.h"
+#include "clc2.h"
 
-#define _XTAL_FREQ  4000000
+#define _XTAL_FREQ  125000
 
 /**
  * @Param

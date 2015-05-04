@@ -59,6 +59,23 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set CLC1 aliases
+#define CLC1_TRIS               TRISA2
+#define CLC1_LAT                LATA2
+#define CLC1_PORT               RA2
+#define CLC1_WPU                WPUA2
+#define CLC1_ANS                ANSA2
+#define CLC1_SetHigh()    do { LATA2 = 1; } while(0)
+#define CLC1_SetLow()   do { LATA2 = 0; } while(0)
+#define CLC1_Toggle()   do { LATA2 = ~LATA2; } while(0)
+#define CLC1_GetValue()         RA2
+#define CLC1_SetDigitalInput()    do { TRISA2 = 1; } while(0)
+#define CLC1_SetDigitalOutput()   do { TRISA2 = 0; } while(0)
+
+#define CLC1_SetPullup()    do { WPUA2 = 1; } while(0)
+#define CLC1_ResetPullup()   do { WPUA2 = 0; } while(0)
+#define CLC1_SetAnalogMode()   do { ANSA2 = 1; } while(0)
+#define CLC1_SetDigitalMode()   do { ANSA2 = 0; } while(0)
 // get/set CLC2 aliases
 #define CLC2_TRIS               TRISC0
 #define CLC2_LAT                LATC0
@@ -74,19 +91,30 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define CLC2_SetAnalogMode()   do { ANSC0 = 1; } while(0)
 #define CLC2_SetDigitalMode()   do { ANSC0 = 0; } while(0)
 // get/set NCO1 aliases
-#define NCO1_TRIS               TRISC6
-#define NCO1_LAT                LATC6
-#define NCO1_PORT               RC6
-#define NCO1_ANS                ANSC6
-#define NCO1_SetHigh()    do { LATC6 = 1; } while(0)
-#define NCO1_SetLow()   do { LATC6 = 0; } while(0)
-#define NCO1_Toggle()   do { LATC6 = ~LATC6; } while(0)
-#define NCO1_GetValue()         RC6
-#define NCO1_SetDigitalInput()    do { TRISC6 = 1; } while(0)
-#define NCO1_SetDigitalOutput()   do { TRISC6 = 0; } while(0)
+#define NCO1_TRIS               TRISC1
+#define NCO1_LAT                LATC1
+#define NCO1_PORT               RC1
+#define NCO1_ANS                ANSC1
+#define NCO1_SetHigh()    do { LATC1 = 1; } while(0)
+#define NCO1_SetLow()   do { LATC1 = 0; } while(0)
+#define NCO1_Toggle()   do { LATC1 = ~LATC1; } while(0)
+#define NCO1_GetValue()         RC1
+#define NCO1_SetDigitalInput()    do { TRISC1 = 1; } while(0)
+#define NCO1_SetDigitalOutput()   do { TRISC1 = 0; } while(0)
 
-#define NCO1_SetAnalogMode()   do { ANSC6 = 1; } while(0)
-#define NCO1_SetDigitalMode()   do { ANSC6 = 0; } while(0)
+#define NCO1_SetAnalogMode()   do { ANSC1 = 1; } while(0)
+#define NCO1_SetDigitalMode()   do { ANSC1 = 0; } while(0)
+// get/set PWM1 aliases
+#define PWM1_TRIS               TRISC5
+#define PWM1_LAT                LATC5
+#define PWM1_PORT               RC5
+#define PWM1_SetHigh()    do { LATC5 = 1; } while(0)
+#define PWM1_SetLow()   do { LATC5 = 0; } while(0)
+#define PWM1_Toggle()   do { LATC5 = ~LATC5; } while(0)
+#define PWM1_GetValue()         RC5
+#define PWM1_SetDigitalInput()    do { TRISC5 = 1; } while(0)
+#define PWM1_SetDigitalOutput()   do { TRISC5 = 0; } while(0)
+
 
 /**
  * @Param
